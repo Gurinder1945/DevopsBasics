@@ -95,6 +95,24 @@ pipeline:
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
+              - step:
+                  type: Command
+                  name: Command_1
+                  identifier: Command_1
+                  spec:
+                    onDelegate: false
+                    environmentVariables: []
+                    outputVariables: []
+                    commandUnits:
+                      - identifier: artifact
+                        name: artifact
+                        type: DownloadArtifact
+                        spec:
+                          destinationPath: /opt/tomcat/webapps
+                  timeout: 10m
+                  strategy:
+                    repeat:
+                      items: <+stage.output.hosts>
             rollbackSteps: []
         tags: {}
         failureStrategies:
