@@ -98,7 +98,9 @@ pipeline:
                           source:
                             type: Inline
                             spec:
-                              script: ./startup.sh
+                              script: |-
+                                ./startup.sh
+                                netstat -tupln
                   timeout: 10m
                   strategy:
                     repeat:
