@@ -76,24 +76,6 @@ pipeline:
           execution:
             steps:
               - step:
-                  type: Command
-                  name: Command_1
-                  identifier: Command_1
-                  spec:
-                    onDelegate: false
-                    environmentVariables: []
-                    outputVariables: []
-                    commandUnits:
-                      - identifier: copyartifact
-                        name: copyartifact
-                        type: DownloadArtifact
-                        spec:
-                          destinationPath: /opt/tomcat/webapps
-                  timeout: 10m
-                  strategy:
-                    repeat:
-                      items: <+stage.output.hosts>
-              - step:
                   type: ShellScript
                   name: ShellScript_1
                   identifier: ShellScript_1
@@ -103,7 +85,8 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: "ls "
+                        script: |
+                          ls 
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
