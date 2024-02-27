@@ -86,11 +86,11 @@ pipeline:
                       type: Inline
                       spec:
                         script: |
-                          echo "ls"
+                          echo "list"
                           ls 
-                          echos "target"
+                          echo "on target"
                           cd target
-                          echo "ls"
+                          echo " target ls"
                           ls
                     environmentVariables: []
                     outputVariables: []
