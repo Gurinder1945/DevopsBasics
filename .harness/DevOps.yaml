@@ -87,6 +87,8 @@ pipeline:
                       spec:
                         script: |
                           ls 
+                          cd target
+                          ls
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
