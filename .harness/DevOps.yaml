@@ -76,26 +76,6 @@ pipeline:
           execution:
             steps:
               - step:
-                  type: ShellScript
-                  name: ShellScript_1
-                  identifier: ShellScript_1
-                  spec:
-                    shell: Bash
-                    executionTarget: {}
-                    source:
-                      type: Inline
-                      spec:
-                        script: |
-                          echo "list"
-                          ls 
-                          echo "on target"
-                          cd target
-                          echo " target ls"
-                          ls
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
-              - step:
                   type: Command
                   name: Command_1
                   identifier: Command_1
@@ -109,6 +89,16 @@ pipeline:
                         type: DownloadArtifact
                         spec:
                           destinationPath: /opt/tomcat/webapps
+                      - identifier: tomcat_startup
+                        name: tomcat startup
+                        type: Script
+                        spec:
+                          workingDirectory: opt/tomcat/bin
+                          shell: Bash
+                          source:
+                            type: Inline
+                            spec:
+                              script: ./startup.sh
                   timeout: 10m
                   strategy:
                     repeat:
