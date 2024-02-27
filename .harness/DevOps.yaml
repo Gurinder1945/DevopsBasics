@@ -93,7 +93,7 @@ pipeline:
                         name: tomcat startup
                         type: Script
                         spec:
-                          workingDirectory: opt/tomcat/bin
+                          workingDirectory: /opt/tomcat/bin
                           shell: Bash
                           source:
                             type: Inline
