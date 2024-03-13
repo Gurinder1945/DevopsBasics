@@ -1,0 +1,59 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 http://maven.apache.org/xsd/settings-1.2.0.xsd">
+  <servers>
+    <server>
+      <id>central</id>
+      <configuration>
+        <httpConfiguration>
+          <get>
+            <usePreemptive>true</usePreemptive>
+          </get>
+          <head>
+            <usePreemptive>true</usePreemptive>
+          </head>
+          <put>
+            <params>
+              <property>
+                <name>http.protocol.expect-continue</name>
+                <value>false</value>
+              </property>
+            </params>
+          </put>
+        </httpConfiguration>
+      </configuration>
+      <username>_json_key_base64</username>
+      <password>ewogICJ0eXBlIjogInNlcnZpY2VfYWNjb3VudCIsCiAgInByb2plY3RfaWQiOiAiYm9vbWluZy1lbnRpdHktNDE0NDEwIiwKICAicHJpdmF0ZV9rZXlfaWQiOiAiNDljNmExNGE1ZTM2NTRmMzFmZjU3NTYzZjgyOGQxOTA2N2I5OWJkZSIsCiAgInByaXZhdGVfa2V5IjogIi0tLS0tQkVHSU4gUFJJVkFURSBLRVktLS0tLVxuTUlJRXZnSUJBREFOQmdrcWhraUc5dzBCQVFFRkFBU0NCS2d3Z2dTa0FnRUFBb0lCQVFDaHp2SjVEZ1JHaDFSUlxua2RFa3JvMXVQb1h2TDNpU1VnTy9CRmpTbWF1MDltZDIxNWRQcm1MSVhCNUlxL3pKYlV0aUQ3bGtyb0VpeFo2aFxuZU8yb1B2SWMzZXhLbEs0ekl3U0xjeVlQbmdCZ2hWYWsrL1RjdmsvS21xVWVHYjVpTW5RUDA5VDNVeEcxdXRwSVxuR1dWQVpmSkZrdm5mVkZVK1Y1S0syRmQyQzFENSt5VVJ0YVBuOElHYTBMSnJ0bzArcEFSMFZBdkdDL0NjUWY4TVxuYUdJSmZhOWZsTytmYzkySG5DZEVOS0tnNE83TXYwcTVVN1l5SUNqc201Y3k0MHQ1NCt1LzQwYUJiK1FQdHdqbFxuSHkvYVZqRERhZ3FjR3I4K0hGbjZzZUpLUHF2S0JvbUFIQWIxT0Y3ejJickY1WGQ4dUVVa3lhL0hqMHhiUEgwS1xuMUNLU2NxYWxBZ01CQUFFQ2dnRUFGeWVRV3FMWEdVbWgxd2RkREpqKzY2VCtVUWN6dzRxQmR6cjF3L05TRnpRQVxuZzhqZm9mc2tMeVJCZ0NnK1pRdWpFeTRKVzE4K1l2MnhFTTNIZ29FNWI4aVJHTzRVVElTSkVMU0NZSTg5WWhLS1xubnRMZ1RCdGV1ekVzaWpWb1lWQnplOVZXSHl0UHVEZjhKditkVmQwUTBZUnlCZE9oWENtM2NtOTVlbzZ0Z0l3RlxuMFg5blNpS0JHSjh2RGRxY0JyNHZqYkhzNFVaU0ZSYjdrd25KelpjeG02VUMwa2UvZkhKUHU0ZHFOZTNGaWZQV1xuOUpRZ0lQdklEUFp3Zk11MW1TVWdWRW04UjFXbHZYVk1RQ2ozc3E1dzBwWUhtbXl6ZzRLeCsvbE1FY00ydk9NQlxuUGRkSjBIQWpvME4wbzkybFpxTUVqZkd6clRKUHA3dmM3cVFEV0hCRTJRS0JnUURSQzJVdnd4YXU0NDJrbnQ1WVxuWG8xbTY2eG1rRmpCUjhZczZ0WGhGZy9JRUxlK0VHa0U5WkNlb3o2ZTllT0hUQmNSUXdlTUhsdTZCZS9pRXpmWVxuNjdPK3phTDBiRm5DdFhIZlBvQU5HdzJDQUVaaXMrT2p4U0JURnBnRk02UjZtWWJVTUJCMlJwdkdzaXRCWXFKeFxuNXdCajZnRENRcnRON0hoZTlPL3A4UEFmSFFLQmdRREdKMW42dVpYWEJuK0JiaHJxMTdCTUg0YnZOcjdTLytwSVxuQTNlYlRZWVkyMTNIS3JJcDZ1eG5OdW9HT1hmVlNTcE1VNko2c2svYVRWUTI2bDNXYlJ5SzhsRldyOVlZaUdHRVxuejU5MTJYY0lnRWRnUFZIVGZheUVZcUxvZG5nY2tFeHd5MGpQSEladzVZdEthOE9PbSt4OWJONUZXM0lrN3lUelxuSjFzN0J3MW5LUUtCZ0QvS2lXdEV6a1E2UG53UTJ1citsNG5qdXkxbE9TQnFKYWlKVlJFbDZWVDAvUTByOXRCRFxubTRrOWFadWFqMzgzRWdiN2ZHOGV5SUVBMU00WmJUNXQxdUVQNFgxVEh5VVN0NWdYZTM0RVZsL29jNUlsTVA5RlxuNVhKVmY3aCtwTitnd0FzNlM1dThPa2N0RVpRWFpGajcxQnVwU2VmOTh5aDVVOVl1U3BRS0tVeGxBb0dCQUlob1xuTUlYcjJkMkRLS1UxNGF2R3ZTTTZGTTU1OWxVVVBQaEVBc05UVTd1cXoxeTY1Smo4a3E3ZTI2MWJSRVg4THZVS1xuSWZDcTdWT1BKaWtEbjROcjYxa3ZSSlVUU0tQc3hvMEJ6SGo1TWZzVks0MXh5UEY1TXhpVE9pZ2kzYjUwQzFzZVxuWmNuRmpqc0xtWjZxbnAxK2N3ZEl1WjR2UEYxMmp3NGdDcXFReVVZNUFvR0JBS2IzaUFzK0hEQVN0eWdadU1iQlxuaTBXVG93em4vVW04TGdpdUJpMXdQTUd2R1FwZXl5ZTlNRWhPWnBMS3dFVUlFUEdXWGNIejdZUjVmbzZHMHlZclxueXFVZ0g1MXg5RWEwQUR3MVJoQlAzRjFWNDIxZUk3bXZTeTV5NnU0Qkx1UGtqTGhiNmREd2hyNFIyTFhsMDB6UFxuYlVLaTh1dlVlbWpoMUJDOEszY0FVdDVIXG4tLS0tLUVORCBQUklWQVRFIEtFWS0tLS0tXG4iLAogICJjbGllbnRfZW1haWwiOiAiaGFybmVzcy1zZXJ2aWNlQGJvb21pbmctZW50aXR5LTQxNDQxMC5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsCiAgImNsaWVudF9pZCI6ICIxMTUwMDQ2NDU2NzEyNjQyMTczMDMiLAogICJhdXRoX3VyaSI6ICJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20vby9vYXV0aDIvYXV0aCIsCiAgInRva2VuX3VyaSI6ICJodHRwczovL29hdXRoMi5nb29nbGVhcGlzLmNvbS90b2tlbiIsCiAgImF1dGhfcHJvdmlkZXJfeDUwOV9jZXJ0X3VybCI6ICJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjEvY2VydHMiLAogICJjbGllbnRfeDUwOV9jZXJ0X3VybCI6ICJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9yb2JvdC92MS9tZXRhZGF0YS94NTA5L2hhcm5lc3Mtc2VydmljZSU0MGJvb21pbmctZW50aXR5LTQxNDQxMC5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsCiAgInVuaXZlcnNlX2RvbWFpbiI6ICJnb29nbGVhcGlzLmNvbSIKfQoK</password>
+    </server>
+  </servers>
+  <profiles>
+    <profile>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>https://asia-south1-maven.pkg.dev/booming-entity-414410/virtualmavenrepo</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+<url>https://asia-south1-maven.pkg.dev/booming-entity-414410/virtualmavenrepo</url>
+<releases>
+<enabled>true</enabled>
+</releases>
+<snapshots>
+<enabled>false</enabled>
+</snapshots>
+</pluginRepository>
+</pluginRepositories>
+<id>central</id>
+</profile>
+</profiles>
+<activeProfiles>
+<activeProfile>central</activeProfile>
+</activeProfiles>
+</settings>

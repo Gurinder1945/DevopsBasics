@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_nsant326_DevopsBasics_1709016127992-pr-trigger-input-set
+  identifier: Build_nsant326_DevopsBasics_1709016127992prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: java_pipeline
+  pipeline:
+    identifier: Build_nsant326_DevopsBasics_1709016127992
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>

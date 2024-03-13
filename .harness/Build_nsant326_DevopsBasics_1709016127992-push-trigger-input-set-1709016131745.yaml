@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_nsant326_DevopsBasics_1709016127992-push-trigger-input-set
+  identifier: Build_nsant326_DevopsBasics_1709016127992pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: java_pipeline
+  pipeline:
+    identifier: Build_nsant326_DevopsBasics_1709016127992
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>

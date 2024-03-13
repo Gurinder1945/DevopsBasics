@@ -1,0 +1,76 @@
+pipeline:
+  identifier: Build_nsant326_DevopsBasics_1709016127992
+  name: Build DevopsBasics
+  orgIdentifier: default
+  projectIdentifier: java_pipeline
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: nsant326/DevopsBasics
+  stages:
+    - stage:
+        name: build
+        identifier: build
+        template:
+          templateRef: javatesttemplate
+          versionLabel: "1"
+    - stage:
+        name: "deployment "
+        identifier: deployment
+        description: ""
+        type: Deployment
+        spec:
+          deploymentType: Ssh
+          service:
+            serviceRef: artifacts
+            serviceInputs:
+              serviceDefinition:
+                type: Ssh
+                spec:
+                  artifacts:
+                    primary:
+                      primaryArtifactRef: <+input>
+                      sources: <+input>
+          environment:
+            environmentRef: deploymentenv
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: deploymentinfra
+          execution:
+            steps:
+              - step:
+                  type: Command
+                  name: Command_1
+                  identifier: Command_1
+                  spec:
+                    onDelegate: false
+                    environmentVariables: []
+                    outputVariables: []
+                    commandUnits:
+                      - identifier: commandstep
+                        name: commandstep
+                        type: DownloadArtifact
+                        spec:
+                          destinationPath: /opt/apache-tomcat-9.0.86/webapps
+                  timeout: 10m
+                  failureStrategies:
+                    - onFailure:
+                        errors:
+                          - AllErrors
+                        action:
+                          type: MarkAsFailure
+                  strategy:
+                    repeat:
+                      items: <+stage.output.hosts>
+            rollbackSteps: []
+        tags: {}
+        delegateSelectors:
+          - docker-delegate
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: MarkAsFailure
