@@ -22,3 +22,12 @@ COPY settings.xml /opt/maven/conf/settings.xml
 
 # Verify Maven installation
 RUN mvn -version
+
+
+FROM openjdk:latest
+
+WORKDIR /app
+
+COPY helloworld.jar /app
+
+CMD ["java", "-jar", "helloworld.jar"]
